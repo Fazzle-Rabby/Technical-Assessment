@@ -1,10 +1,12 @@
 # DevOps Project with docker
 
-Send files or execute command over ssh:
+Developer > Git-Hub > Jenkins > Ansible > Docker-Host
+
+# Send files or execute command over ssh:
 
 rsync -avh /var/lib/jenkins/workspace/docker-job/Dockerfile  root@172.31.31.209:/opt
 
-Send files or execute command over ssh:
+# Send files or execute command over ssh:
 
 cd /opt
 docker image build -t $JOB_NAME:v1.$BUILD_ID .
@@ -14,7 +16,7 @@ docker image push fazzlerabby/$JOB_NAME:v1.$BUILD_ID
 docker image push fazzlerabby/$JOB_NAME:latest
 docker image rmi  $JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:latest
 
-Send build artifacts over ssh:
+# Send build artifacts over ssh:
 
 ansible-playbook  /sourcecode/docker.yml
 
