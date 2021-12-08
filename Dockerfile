@@ -8,5 +8,5 @@ WORKDIR /var/www/html
 RUN unzip speed.zip
 RUN cp -rvf speed/* .
 RUN rm -rf speed speed.zip
-CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
+CMD  ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 80
