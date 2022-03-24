@@ -1,5 +1,5 @@
 - hosts: all
   tasks:
-    - name: create conbtainer
+    - name: create container
       shell: docker container run -itd --name docker-container -p 9000:80 fazzlerabby/soavary
 
