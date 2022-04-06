@@ -2,7 +2,7 @@
 
 
 
-## Install and configure DockerHost 
+## Installation and configuration DockerHost 
 
 `passwd root`
 `systemctl restart sshd`
@@ -14,14 +14,32 @@
 `docker image ls`
 
 
-## Install and configre jenkins
+## Installation and configuration jenkins
 
 `yum install java* -y`
 `yum install jenkins -y`
 `systemctl start jenkins`
 `systemctl enable jenkins`
-[for integration with git]
 `yum install git`
+`ssh-keygen`
+`ssh-copy-id root@(ansible private ip)`
+
+
+## Installation and configuration Ansible
+
+`yum install ansible -y`
+`passwd root`
+`systemctl restart sshd`
+`systemctl enable sshd`
+`vim /etc/ansible/hosts`
+[dockerhost]
+private ip set
+`ssh-keygen`
+`ssh-copy-id -i root@(dockerhost private ip)`
+`yum install docker -y`
+`systemctl start docker`
+`systemctl enable docker`
+
 
 Send files or execute command over ssh:
 
