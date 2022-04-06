@@ -14,7 +14,14 @@
 `docker image ls`
 
 
+## Install and configre jenkins
 
+`yum install java* -y`
+`yum install jenkins -y`
+`systemctl start jenkins`
+`systemctl enable jenkins`
+\for integration with git
+`yum install git`
 
 Send files or execute command over ssh:
 
