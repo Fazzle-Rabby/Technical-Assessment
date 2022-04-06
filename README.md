@@ -20,7 +20,7 @@
 `yum install jenkins -y`
 `systemctl start jenkins`
 `systemctl enable jenkins`
-/for integration with git
+[for integration with git]
 `yum install git`
 
 Send files or execute command over ssh:
