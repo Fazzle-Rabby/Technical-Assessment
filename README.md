@@ -44,6 +44,7 @@ private ip set
 ## jenkins CI/CD pipeline setup
 
 * Send files or execute command over ssh:
+
 `rsync -avh /var/lib/jenkins/workspace/docker-job/Dockerfile  root@ansible private ip:/opt`
 
 * Send files or execute command over ssh:
@@ -56,9 +57,9 @@ docker image push fazzlerabby/$JOB_NAME:v1.$BUILD_ID
 docker image push fazzlerabby/$JOB_NAME:latest
 docker image rmi  $JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:latest`
 
-# Send build artifacts over ssh:
+* Send build artifacts over ssh:
 
-ansible-playbook  /sourcecode/docker.yml
+`ansible-playbook  /sourcecode/ansible-playbook.yml`
 
 - hosts: all
   tasks:
