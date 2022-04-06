@@ -1,8 +1,15 @@
-#  DevOps Project with docker
+#  DevOps Project Challenge
 
-Developer > Git-Hub > Jenkins > Ansible > Docker-Host
 
-# Send files or execute command over ssh:
+
+# Install and configure DockerHost 
+
+`passwd root`
+
+
+
+
+Send files or execute command over ssh:
 
 rsync -avh /var/lib/jenkins/workspace/docker-job/Dockerfile  root@172.31.31.209:/opt
 
