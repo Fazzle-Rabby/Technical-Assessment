@@ -66,5 +66,5 @@ docker image rmi  $JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:v1.$BUILD_ID  fa
 
 - hosts: all
   tasks:
-    - name: create conbtainer
+    - name: create container
       shell: docker container run -itd --name docker-container -p 9000:80 fazzlerabby/docker-job
