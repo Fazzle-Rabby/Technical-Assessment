@@ -2,9 +2,16 @@
 
 
 
-# Install and configure DockerHost 
+## Install and configure DockerHost 
 
 `passwd root`
+`systemctl restart sshd`
+`systemctl enable sshd`
+`yum install docker -y`
+`systemctl start docker`
+`systemctl enable docker`
+`docker container ls`
+`docker image ls`
 
 
 
