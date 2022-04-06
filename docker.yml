@@ -1,5 +1,0 @@
-- hosts: all
-  tasks:
-    - name: create container
-      shell: docker container run -itd --name docker-sovary-Web -p 9000:80 fazzlerabby/sovary
-
