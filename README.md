@@ -61,13 +61,10 @@ docker image rmi  $JOB_NAME:v1.$BUILD_ID  fazzlerabby/$JOB_NAME:v1.$BUILD_ID  fa
 
 `ansible-playbook  /sourcecode/ansible-playbook.yml`
 
+
+## Docker container deploy in DockerHost
+
 - hosts: all
   tasks:
-    - name: stop container
-      shell: docker container stop docker-container
-    - name: remove container
-      shell: docker container rm docker-container
-    - name: remove image
-      shell: docker image rm fazzlerabby/docker-job
     - name: create conbtainer
       shell: docker container run -itd --name docker-container -p 9000:80 fazzlerabby/docker-job
